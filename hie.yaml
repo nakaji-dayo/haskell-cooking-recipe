@@ -1,0 +1,37 @@
+cradle:
+  multi:
+    - path: "./"
+      config:
+        cradle:
+          stack:
+            - path: "./src"
+              component: "cooking-recipe-dsl:lib"
+            - path: "./app/Main.hs"
+              component: "cooking-recipe-dsl:exe:cooking-recipe-dsl-exe"
+            - path: "./app/Paths_cooking_recipe_dsl.hs"
+              component: "cooking-recipe-dsl:exe:cooking-recipe-dsl-exe"
+            - path: "./test"
+              component: "cooking-recipe-dsl:test:cooking-recipe-dsl-test"
+    - path: ./Setup.hs
+      config:
+        cradle:
+          direct:
+            arguments:
+              - "-package Cabal"
+              - "-package base"
+
+# cradle:
+#   stack:
+#     component: "cooking-recipe-dsl:lib"
+
+# cradle:
+#   multi:
+#     - path: ./
+#       config:
+#         cradle:
+#           cabal:
+#             component: "cooking-recipe-dsl:lib"
+#     - path: ./Setup.hs
+#       config:
+#         cradle:
+#           none:
