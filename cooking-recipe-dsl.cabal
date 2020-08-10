@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 6c46329a450acee83b29cbdbf71312ab7bddf743290891c93e6cccbf215d5084
+-- hash: aa3a032a97ed64919848a205dacabf5f8bd1451835e315e3aa4d2d4ea77788d0
 
 name:           cooking-recipe-dsl
 version:        0.1.0.0
@@ -34,8 +34,11 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , bytestring
+    , clay
     , containers
     , free
+    , lucid
     , mtl
     , unordered-containers
   default-language: Haskell2010
@@ -49,9 +52,12 @@ executable cooking-recipe-dsl-exe
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , bytestring
+    , clay
     , containers
     , cooking-recipe-dsl
     , free
+    , lucid
     , mtl
     , unordered-containers
   default-language: Haskell2010
@@ -66,9 +72,12 @@ test-suite cooking-recipe-dsl-test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , bytestring
+    , clay
     , containers
     , cooking-recipe-dsl
     , free
+    , lucid
     , mtl
     , unordered-containers
   default-language: Haskell2010

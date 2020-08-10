@@ -25,6 +25,9 @@ dependencies:
 - free
 - containers
 - unordered-containers
+- lucid
+- bytestring
+- clay
 
 library:
   source-dirs: src
